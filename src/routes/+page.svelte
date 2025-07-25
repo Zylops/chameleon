@@ -12,7 +12,7 @@
         reveal: false,
         currentCard: 0,
         changing: false,
-        changeTime: 5000,
+        changeTime: 5000, // time card takes to finish flipping, decrease if phones are passed faster
         loading: false
     })
 
@@ -22,25 +22,7 @@
         return data["word"]
     }
 
-    interface WordResponse extends JSON {
-        word: string
-    }
-
-    interface Game {
-        category: string | undefined,
-        topic: string | undefined,
-        players: number,
-        imposter: number | undefined
-    }
-
-    interface GameEngine {
-        started: boolean,
-        reveal: boolean,
-        currentCard: number,
-        changing: boolean,
-        changeTime: number,
-        loading: boolean
-    }
+    
 
     function getImposter(): number {
         let min = Math.ceil(0);
