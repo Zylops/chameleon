@@ -1,5 +1,13 @@
+
+
 <p align="center">
-    <img src="/static/bug.svg">
+<img style="width: 20%;" src="/static/bug.svg"/>
+</p>
+
+<h3 align="center">chameleon</h3>
+
+<p align="center">
+    <img src="https://img.shields.io/github/license/Zylops/chameleon">
 	<a href="https://gitHub.com/Zylops/chameleon/graphs/commit-activity"><img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
 	<a href="https://gitHub.com/Zylops/chameleon/issues/"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/Zylops/chameleon.svg" /></a>
     <img src="https://img.shields.io/badge/framework-svelte-orange">
