@@ -1,5 +1,3 @@
-
-
 <p align="center">
 <img style="width: 20%;" src="/static/bug.svg"/>
 </p>
@@ -55,14 +53,14 @@ This is a web adaptation of the party game **Chameleon**, built with [SvelteKit]
 
 3. **Run the development server**:
     ```bash
-    npm run dev -- --open
+    npm run dev
     ```
     This will start the app and make it accessible on your local network.  
-    You can then connect to the app from your phone by entering your computer’s IP address in your phone’s browser.
+    After starting, your terminal will display a local network IP address (e.g., `http://192.168.1.42:5173`) and a QR code.
 
 4. **Connect with a phone**:
-    - After running the development server, look in your terminal/console for the local network IP address (e.g., `http://192.168.1.42:5173`) shown by the system hosting Chameleon.
-    - On your phone (connected to the same Wi-Fi network), open a browser and enter that IP address.
+    - On your phone (connected to the same Wi-Fi network), either scan the QR code shown in
+    your terminal or manually enter the displayed IP address in your phone’s browser.
 
 ## Usage
 

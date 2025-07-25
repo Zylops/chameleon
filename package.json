@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
@@ -33,6 +33,7 @@
 	},
 	"dependencies": {
 		"@google/genai": "^1.10.0",
-		"mime": "^4.0.7"
+		"mime": "^4.0.7",
+		"qrcode-terminal": "^0.12.0"
 	}
 }
