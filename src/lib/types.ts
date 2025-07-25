@@ -6,7 +6,7 @@ interface Game {
     category: string | undefined,
     topic: string | undefined,
     players: number,
-    imposter: number | undefined
+    chameleon: number | undefined
 }
 
 interface GameEngine {

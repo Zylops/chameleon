@@ -4,7 +4,7 @@
         topic: "",
         players: 1,
         category: "",
-        imposter: -99,
+        chameleon: -99,
     })
 
     let engine: GameEngine = $state({
@@ -24,7 +24,7 @@
 
     
 
-    function getImposter(): number {
+    function getChameleon(): number {
         let min = Math.ceil(0);
         let max = Math.floor(game["players"]-1);
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -34,7 +34,7 @@
     async function startGame() {
         engine["loading"] = true
         game["topic"] = await getWord()
-        game["imposter"] = getImposter()
+        game["chameleon"] = getChameleon()
 
         engine["reveal"] = false
         engine["currentCard"] = 0
@@ -130,9 +130,9 @@
                 <div class="">
                     {#if engine["changing"]} <p class="mt-4 text-3xl font-light">Pass the phone now.</p> {/if}
                     <div class:opacity-0={engine["changing"]} class="h-full py-20">
-                        {#if engine["currentCard"] == game["imposter"]}
+                        {#if engine["currentCard"] == game["chameleon"]}
                         <p class="font-semibold text-lg">You are the</p>
-                        <p class="font-bold text-xl imposterColor">imposter</p>
+                        <p class="font-bold text-xl imposterColor">chameleon</p>
                         {:else}
                         <p class="font-semibold text-lg">The topic is:</p>
                         <p class="font-bold text-xl bugColor" >{game["topic"]}</p>
@@ -158,10 +158,10 @@
 <div class="mt-6 flex justify-center items-center min-w-screen min-h-screen">
     <div>
         {#if engine["reveal"] }
-            <p class="font-black text-4xl">Player {game["imposter"]+1}</p>
-            <p>was the imposter.</p>
+            <p class="font-black text-4xl">Player {game["chameleon"]+1}</p>
+            <p>was the chameleon.</p>
         {/if}
-        <button onclick={() => {engine["reveal"] = true}} class="w-full bg-black font-bold text-white p-2 my-4 imposterBg cursor-pointer">Reveal Imposter</button>
+        <button onclick={() => {engine["reveal"] = true}} class="w-full bg-black font-bold text-white p-2 my-4 imposterBg cursor-pointer">Reveal Chameleon</button>
         <button onclick={() => {window.location = "/"}} class="w-full bg-black font-bold text-white p-2 bugBg cursor-pointer mt-8">New Game</button>
     </div>
 

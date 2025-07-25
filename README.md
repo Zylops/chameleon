@@ -19,14 +19,14 @@ This is a web adaptation of the party game **Chameleon**, built with [SvelteKit]
 
 ## Game Overview
 
-- **Players**: Everyone except one person (the "imposter") receives a secret topic.
-- **Imposter**: Does not know the topic.
-- **Goal**: Players take turns saying something about the topic. After all turns, everyone tries to deduce who the imposter is.
+- **Players**: Everyone except one person (the "chameleon") receives a secret topic.
+- **Chameleon**: Does not know the topic.
+- **Goal**: Players take turns saying something about the topic. After all turns, everyone tries to deduce who the chameleon is.
 
 ## How This App Works
 
 - The app generates a topic using Gemini LLM.
-- Each player is dealt their role (topic or imposter) one at a time.
+- Each player is dealt their role (topic or chameleon) one at a time.
 - The app is designed to run on a central server (laptop/desktop) and be accessed by a single phone, which is passed around to each player for their turn.
 - The app does **not** handle the actual gameplay or voting—just topic/role assignment.
 
@@ -67,8 +67,8 @@ This is a web adaptation of the party game **Chameleon**, built with [SvelteKit]
 1. Enter the number of players.
 2. (Optional) Enter a category for the topic.
 3. Press **Start**.
-4. Each player views their role (topic or imposter) and passes the phone to the next player.
-5. At the end of the game, use the "Reveal the Imposter" button.
+4. Each player views their role (topic or chameleon) and passes the phone to the next player.
+5. At the end of the game, use the "Reveal the Chameleon" button.
 
 ## Customizing topic generation  
 You can modify the prompt used for topic generation by editing the `prompt` variable in [`src/lib/index.js`](src/lib/index.js).
