@@ -9,6 +9,8 @@
 
 This is a web adaptation of the party game **Chameleon**, built with [SvelteKit](https://kit.svelte.dev/) and TypeScript. The app uses Google's Gemini API to generate topics for each round.
 
+> *I made this so I could play with my cousins without needing someone to write chits and know the topic in advance.*
+
 ## Game Overview
 
 - **Players**: Everyone except one person (the "imposter") receives a secret topic.
@@ -35,20 +37,24 @@ This is a web adaptation of the party game **Chameleon**, built with [SvelteKit]
     ```
 
 2. **Set up Gemini API key**:
-    - Create a `.env` file in the root:
+    - Go to [Google AI Studio](https://aistudio.google.com/) and sign in with your Google account.
+    - Click on your profile icon in the top right and select "API Keys".
+    - Click "Create API Key" and copy the generated key.
+    - Create a `.env` file in the root of your project:
       ```
       GEMINI_KEY=your_google_gemini_api_key
       ```
 
 3. **Run the development server**:
     ```bash
-    npm run dev -- --open # open to local network so you can connect to the ip from your phone
+    npm run dev -- --open
     ```
+    This will start the app and make it accessible on your local network.  
+    You can then connect to the app from your phone by entering your computer’s IP address in your phone’s browser.
 
 4. **Connect with a phone**:
-    - Open the app in a browser on your PC.
-    - Connect to the app from a phone (same network).
-    - Pass the phone around for each player's turn.
+    - After running the development server, look in your terminal/console for the local network IP address (e.g., `http://192.168.1.42:5173`) shown by the system hosting Chameleon.
+    - On your phone (connected to the same Wi-Fi network), open a browser and enter that IP address.
 
 ## Usage
 
